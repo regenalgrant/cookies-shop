@@ -1,57 +1,13 @@
-body {
-color: #fff;
-font: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
-margin: 12px 15px;
+table, td {
+	border: 1px solid black;
 }
 
-.original,
-.box {
-border-radius: 10px;
+td {
+	padding: 10px;
+	border-radius: 15px;
 }
 
-.original {
-background: #eaeaed;
-border: 1px dashed #cecfd5;
-float: left;
-margin: 9px 8px;
-}
-
-.box {
-background: #2db34a;
-height: 95px;
-line-height: 95px;
-text-align: center;
-width: 150px;
-}
-
-.spin {
-cursor: pointer;
-transform-style: preserve-3d;
-}
-
-.spin:hover {
-animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-0% {
-  transform: rotateY(0deg);
-}
-100% {
-  transform: rotateY(180deg);
-}
-.box-1 {
-  transform: scale(3.25);
-}
-.box-2 {
-  transform: scale(1.25);
-}
-.box-3 {
-  transform: scale(1.25);
-}
-.box-4 {
-  transform: scale(1.25);
-}
-.box-5 {
-  transform: scale(1.25);
+th {
+	background-color: navy;
+	color: white;
 }
