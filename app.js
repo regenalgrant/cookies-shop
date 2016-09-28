@@ -36,7 +36,7 @@ CookieShop.prototype.gererateRandom = function(min, max) {
     }
     // return console.log('Random hourly customers have been calculated');
   },
-  trEl.childNodes[trEl.childNodes.length - 1].textContent = shop.dailyCookies;
+  //trEl.childNodes[trEl.childNodes.length - 1].textContent = shop.dailyCookies;
 document.getElementById('new-store').addEventListener('submit', function(event)
 {
 event.preventDefault();
@@ -94,3 +94,7 @@ event.target.avg.avg.value = null;
 };
 
 firstAndPike.render();
+SeaTac Airport.render();
+Southcenter Mall.render();
+Bellevue Square.render();
+Alki.render();
