@@ -1,131 +1,51 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <title>Solution to Sept 26 lab assignment</title>
-    <link rel="style" href="style.css">
-</head>
-
-<body>
-    <h1>CookieShop</h1>
-    <h2>First and Pike</h2>
-      <table id="firstandpikeUL"></table>
-        <h2>SeaTac Airport</h2>
-          <ul id="seattac airportUL"></ul>
-            <h2>Seattle Center</h2>
-              <ul id="seattlecenterUL"></ul>
-                <h2>Capital Hill</h2>
-                  <ul id="capital hillUL"></ul>
-                    <h2>Alki</h2>
-      <ul id="alkiUL" </ul>
-
-        <table id ="salesDataTableData">
-  <tr>
-    <th>Hours</th>
-   <th>6am</th>
-    <th>7am</th>
-    <th>8am</th>
-    <th>9am</th>
-    <th>10am</th>
-    <th>11am</th>
-    <th>12pm</th>
-    <th>6pm</th>
-    <th>7pm</th>
-    <th>8pm</th>
-    <th>9pm</th>
-    <th>10pm</th>
-    <th>11pm</th>
-    <th>12pm</th>
-  </tr>
-  <th>First and Pike</th>
-   <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </td>
-  <tr>
- <th>SeaTac</th>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Seattle Center</th>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Capital Hill</th>
-     <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Alki</th>
-     <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-</table>
-
-
-        <script src="app.js"></script>
-</body>
+  <head>
+    <title>Salmon Cookies</title>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <img src="http://www.fishinguy.com/tpl/img/species/SockeyeSalmon.png">
+      <h1>Salmon Stands</h1>
+      <h4>World Famous</h4>
+    </header>
+    <main>
+      <section>
+        <form id="store_info">
+          <fieldset>
+            <legend>Store Data</legend>
+            <div>
+              <label for="location">Location</label>
+              <br>
+              <input type="text" name="location" size="45" required>
+            </div>
+            <div>
+              <label for="min_customers">Minimum Customers Per Hour</label>
+              <br>
+              <input type="text" name="min_customers" size="25" required>
+            </div>
+            <div>
+              <label for="max_customers">Maximum Customers Per Hour</label>
+              <br>
+              <input type="text" name="max_customers" size="45" required>
+            </div>
+            <div>
+              <label for="avg_cookies">Average Cookies Per Customer</label>
+              <br>
+              <input type="text" name="avg_cookies" size="45" required>
+            </div>
+            <div>
+              <button type="submit" name="button" class="button">Add</button>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+      <section>
+          <table id="store_reporting_js"></table>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
 
 </html>
