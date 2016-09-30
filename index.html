@@ -2,50 +2,53 @@
 <html>
   <head>
     <title>Salmon Cookies</title>
-    <link href="style.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
   </head>
   <body>
     <header>
       <img src="http://www.fishinguy.com/tpl/img/species/SockeyeSalmon.png">
       <h1>Salmon Stands</h1>
-      <h4>World Famous</h4>
+      <h4>"Da Best"</h4>
     </header>
-    <main>
-      <section>
-        <form id="store_info">
-          <fieldset>
-            <legend>Store Data</legend>
-            <div>
-              <label for="location">Location</label>
-              <br>
-              <input type="text" name="location" size="45" required>
-            </div>
-            <div>
-              <label for="min_customers">Minimum Customers Per Hour</label>
-              <br>
-              <input type="text" name="min_customers" size="25" required>
-            </div>
-            <div>
-              <label for="max_customers">Maximum Customers Per Hour</label>
-              <br>
-              <input type="text" name="max_customers" size="45" required>
-            </div>
-            <div>
-              <label for="avg_cookies">Average Cookies Per Customer</label>
-              <br>
-              <input type="text" name="avg_cookies" size="45" required>
-            </div>
-            <div>
-              <button type="submit" name="button" class="button">Add</button>
-            </div>
-          </fieldset>
-        </form>
-      </section>
-      <section>
-          <table id="store_reporting_js"></table>
-      </section>
-    </main>
-    <script src="app.js"></script>
-  </body>
+     </header>
+	    <main>
+	      <section>
+	        <form id="business_info">
+	          <fieldset>
+	            <legend>Business Data</legend>
+	            <div>
+	              <label for="location">Location</label>
+	              <br>
+	              <input type="text" name="location" size="45" required>
+	            </div>
+	            <div>
+	              <label for="min_customers">Minimum Customers Per Hour</label>
+	              <br>
+	              <input type="number" name="min_customers" size="45" required>
+	            </div>
+	            <div>
+	              <label for="max_customers">Maximum Customers Per Hour</label>
+	              <br>
+	              <input type="number" name="max_customers" size="45" required>
+	            </div>
+	            <div>
+	              <label for="avg_cookies">Average Cookies Per Customer</label>
+	              <br>
+	              <input type="number" name="avg_cookies" size="10" required>
+	            </div>
+	            <div>
+	              <button type="submit" name="button" class="button">Add</button>
+	              <button type="submit" name="button" class="button clear">Clear</button>
+	            </div>
+	          </fieldset>
+	        </form>
+	      </section>
+	      <section>
+	          <table id="businesses_reporting_js"></table>
+	      </section>
+	    </main>
+	    <script src="app.js"></script>
+	  </body>
 
-</html>
+
+	</html>
