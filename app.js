@@ -1,13 +1,13 @@
 'use strict';
 
 var hoursOpenPerDay = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm'];
-var shops = [];
+var franchises = [];
 var salesByHour = [];
 var totalAllLocationsSales = 0;
-var newLocations = document.getElementById('store_info');
+var newLocations = document.getElementById('stand_info');
 var tableDataDisplay =
 
-document.getElementById('shops_reporting_js');
+document.getElementById('franchises_reporting_js');
 var Stores = function(minCustomersPerHour, maxCustomersPerHour, avgCookiesPerCustomer, location) {
   this.minCustomersPerHour = minCustomersPerHour;
   this.maxCustomersPerHour = maxCustomersPerHour;
@@ -18,7 +18,7 @@ var Stores = function(minCustomersPerHour, maxCustomersPerHour, avgCookiesPerCus
   this.totalDailyCookiesSold = 0;
   this.calcCustomersPerHour();
   this.calcCookiesSoldPerHour();
-  shops.push(this);
+  franchises.push(this);
 
 };
 
@@ -45,10 +45,10 @@ Stores.prototype.renderTableBody = function () {
     tdEl.textContent = this.cookiesSoldPerHour[a];
 
     trEl.appendChild(tdEl);
-    // location[i] row
+
   }
   var tdTotalEl = document.createElement('td');
-  // usiness[i] location
+
   tdTotalEl.textContent = this.totalDailyCookiesSold;
   trEl.appendChild(tdTotalEl);
   tableDataDisplay.appendChild(trEl);
@@ -60,13 +60,13 @@ new Stores(11, 38, 3.7, 'Seattle Center');
 new Stores(20, 38, 2.3, 'Capitol Hill');
 new Stores(2, 16, 4.6, 'Alki Beach');
 
-function renderShops() {
+function renderFranchises() {
   tableDataDisplay.innerHTML = '';
   salesByHour = [];
   totalAllLocationsSales = 0;
   renderTableHeader();
-  for (var i = 0; i < shops.length; i++) {
-    shops[i].renderTableBody();
+  for (var i = 0; i < franchises.length; i++) {
+    franchises[i].renderTableBody();
   }
   totalSalesCalc();
   renderTableFooter();
@@ -84,7 +84,7 @@ function addLocations (event) {
   event.target.max_customers.value = null;
   event.target.avg_cookies.value = null;
 
-  renderShops();
+  renderFranchises();
 }
 function renderTableHeader() {
   var theadEl = document.createElement('thead');
@@ -123,15 +123,15 @@ function renderTableFooter() {
 function totalSalesCalc() {
   for (var i = 0; i < hoursOpenPerDay.length; i++) {
     var hourlyCookieSales = 0;
-    for (var a = 0; a < shops.length; a++) {
-      hourlyCookieSales += shops[a].cookiesSoldPerHour[i];
+    for (var a = 0; a < franchises.length; a++) {
+      hourlyCookieSales += franchises[a].cookiesSoldPerHour[i];
     }
     salesByHour.push(hourlyCookieSales);
-    //array
+
   }
-  for (var y = 0; y < shops.length; y++) {
-    totalAllLocationsSales += shops[y].totalDailyCookiesSold;
+  for (var y = 0; y < franchises.length; y++) {
+    totalAllLocationsSales += franchises[y].totalDailyCookiesSold;
   }
 }
 newLocations.addEventListener('submit', addLocations);
-renderShops();
+renderFranchises();
